@@ -236,7 +236,7 @@
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Chili.ico" />
+    <Image Include="Snake.ico" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Sounds\Eat.wav" />

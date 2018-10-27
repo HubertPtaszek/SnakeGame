@@ -2,6 +2,7 @@
 #include "ChiliWin.h"
 #include "Graphics.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 #include "ChiliException.h"
 #include <string>
 
@@ -54,7 +55,7 @@ public:
 	Keyboard kbd;
 	Mouse mouse;
 private:
-	static constexpr wchar_t* wndClassName = L"Chili DirectX Framework Window";
+	static constexpr wchar_t* wndClassName = L"Snake Game";
 	HINSTANCE hInst = nullptr;
 	std::wstring args;
 };
