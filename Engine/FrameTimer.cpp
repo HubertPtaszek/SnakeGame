@@ -1,6 +1,6 @@
 #include "FrameTimer.h"
 
-using namespace std::chrono;
+using namespace std::chrono; // przesteñ nazw zawierajaca zegar 
 
 FrameTimer::FrameTimer()
 {

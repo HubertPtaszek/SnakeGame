@@ -54,8 +54,8 @@ void Frame::ConsumeContents(const Location& loc)
 
 void Frame::SpawnContents(std::mt19937 & rng, const Snake & snake, CellContents contentsType)
 {
-	std::uniform_int_distribution<int> xDist(0, GetGridWidth() - 1);
-	std::uniform_int_distribution<int> yDist(0, GetGridHeight() - 1);
+	uniform_int_distribution<int> xDist(0, GetGridWidth() - 1);
+	uniform_int_distribution<int> yDist(0, GetGridHeight() - 1);
 
 	Location newLoc;
 	do

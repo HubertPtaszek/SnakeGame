@@ -105,7 +105,6 @@ void Game::UpdateModel()
 	{
 		if (wnd.kbd.KeyIsPressed(VK_RETURN))
 		{
-
 			gameIsStarted = true;
 		}
 	}

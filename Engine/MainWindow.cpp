@@ -5,10 +5,7 @@
 #include "Game.h"
 #include <assert.h>
 
-MainWindow::MainWindow( HINSTANCE hInst,wchar_t * pArgs )
-	:
-	args( pArgs ),
-	hInst( hInst )
+MainWindow::MainWindow( HINSTANCE hInst,wchar_t * pArgs ) : args( pArgs ), hInst( hInst )
 {
 	// register window class
 	WNDCLASSEX wc = { sizeof( WNDCLASSEX ),CS_CLASSDC,_HandleMsgSetup,0,0,

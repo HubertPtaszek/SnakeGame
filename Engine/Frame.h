@@ -37,7 +37,7 @@ public:
 	bool IsInsideFrame(const Location& loc) const;
 	CellContents GetContents(const Location& loc) const;
 	void ConsumeContents(const Location& loc);
-	void SpawnContents(std::mt19937& rng, const class Snake& snake, CellContents contents);
+	void SpawnContents(mt19937& rng, const class Snake& snake, CellContents contents);
 	void DrawFrame();
 	void DrawCells();
 private:
