@@ -1,5 +1,8 @@
 #pragma once
 
+/**
+* Klasa s³u¿aca do operacji na kolorach, zalecane utworzenie jej dla frameworku.
+*/
 class Color
 {
 public:
@@ -72,7 +75,10 @@ public:
 	}
 };
 
-namespace Colors // domyœlna dla frameworku
+/**
+* Przestrzeñ nazw zawarta w projekcie, zawiera definicje kolorów.
+*/
+namespace Colors
 {
 	static constexpr Color MakeRGB(unsigned char r, unsigned char g, unsigned char b)
 	{

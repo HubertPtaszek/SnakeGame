@@ -1,9 +1,10 @@
 #pragma once
 #define _WIN32_WINNT 0x0601 //for Windows 7 or later
 #include <sdkddkver.h> //for Windows 7 or later
-// The following #defines disable a bunch of unused windows stuff. If you 
-// get weird errors when trying to do some windows stuff, try removing some
-// (or all) of these defines (it will increase build time though).
+
+/**
+* Definicje domyœlnie zwarte we frameworku i niezbêdne do dzia³ania.
+*/
 #define WIN32_LEAN_AND_MEAN
 #define NOGDICAPMASKS
 #define NOSYSMETRICS

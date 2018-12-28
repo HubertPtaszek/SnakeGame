@@ -21,9 +21,9 @@ class Frame
 	static constexpr int framePadding = 2;
 	static constexpr int x = 70;
 	static constexpr int y = 50;
-	Graphics& gfx;
+	Graphics& gfx; /*!< WskaŸnik na klasê  opisuj¹cej wygl¹d graficzny "Graphics". */
 public:
-	enum class CellContents
+	enum class CellContents /*!< Typ generyczny "CellContents" okreœlaj¹cy typ danej komórki (trucizna, jedzenie itd). */
 	{
 		Empty,
 		Obstacle,
@@ -41,5 +41,5 @@ public:
 	void DrawFrame();
 	void DrawCells();
 private:
-	vector<CellContents> contents;  //dostêp do publicznego enum CellContents
+	vector<CellContents> contents;  /*!< Klasa vector zawieraj¹ca obiekty typu generycznego "CellContents". */
 };

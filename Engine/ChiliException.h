@@ -1,8 +1,10 @@
-#pragma once
+#pragma once /*!< Dyrektywa preprocesora  pilnuj¹ca za³¹czania plików Ÿród³owych w procesie kompilacji. */
 #include <string>
 
 using namespace std;
-
+/**
+* Klasa obs³uguj¹ca wyj¹tki w aplikacji.
+*/
 class ChiliException
 {
 	wstring note;

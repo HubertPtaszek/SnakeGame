@@ -6,7 +6,11 @@
 #include "ChiliException.h"
 #include <string>
 
-// for granting special access to hWnd only for Graphics constructor
+using namespace std;
+
+/**
+* Nadanie dostepu dla klasy Graphics do klasy wbudowanej HWNDKey
+*/
 class HWNDKey
 {
 	friend Graphics::Graphics( HWNDKey& );
@@ -19,6 +23,11 @@ protected:
 	HWND hWnd = nullptr;
 };
 
+/**
+* Klasa MainWindow dziedziczy równie¿ po klasie wbudowanej HWNDKey.
+*
+* Zawiera ona obs³uge wyj¹tków oraz standardowwa obs³ugê okna.
+*/
 class MainWindow : public HWNDKey
 {
 public:
@@ -26,8 +35,8 @@ public:
 	{
 	public:
 		using ChiliException::ChiliException;
-		virtual std::wstring GetFullMessage() const override { return GetNote() + L"\nAt: " + GetLocation(); }
-		virtual std::wstring GetExceptionType() const override { return L"Windows Exception"; }
+		virtual wstring GetFullMessage() const override { return GetNote() + L"\nAt: " + GetLocation(); }
+		virtual wstring GetExceptionType() const override { return L"Windows Exception"; }
 	};
 public:
 	MainWindow( HINSTANCE hInst,wchar_t* pArgs );
@@ -36,14 +45,13 @@ public:
 	~MainWindow();
 	bool IsActive() const;
 	bool IsMinimized() const;
-	void ShowMessageBox( const std::wstring& title,const std::wstring& message ) const;
+	void ShowMessageBox( const wstring& title,const wstring& message ) const;
 	void Kill()
 	{
 		PostQuitMessage( 0 );
 	}
-	// returns false if quitting
 	bool ProcessMessage();
-	const std::wstring& GetArgs() const
+	const wstring& GetArgs() const
 	{
 		return args;
 	}
@@ -57,5 +65,5 @@ public:
 private:
 	static constexpr wchar_t* wndClassName = L"Snake Game";
 	HINSTANCE hInst = nullptr;
-	std::wstring args;
+	wstring args;
 };

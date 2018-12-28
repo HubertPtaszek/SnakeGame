@@ -10,10 +10,18 @@
 
 using namespace std;
 
-// forward declare WAVEFORMATEX so we don't have to include kbullshit headers
+/**
+* Deklaracje wnudowanych struktur w sposób globalny w celu pozniejszego ich powielania
+*/
 struct tWAVEFORMATEX;
 typedef tWAVEFORMATEX WAVEFORMATEX;
 
+
+/**
+* Klasy SoundSystem i Sound, s¹ klasami zalecanymi do zawarcia w ChiliFramework (DirectX).
+*
+* Zosta³y zmodyfikowane na potzreby dzwiêku w naszej aplikacji
+*/
 class SoundSystem
 {
 	class XAudioDll
@@ -80,7 +88,7 @@ public:
 	void PlaySoundBuffer(class Sound& s, float freqMod, float vol);
 private:
 	SoundSystem();
-	void DeactivateChannel(Channel& channel);  // private bo uzywa chaneli zadklarowanych pozniej w public
+	void DeactivateChannel(Channel& channel);
 	XAudioDll xaudio_dll;
 	Microsoft::WRL::ComPtr<struct IXAudio2> pEngine;
 	struct IXAudio2MasteringVoice* pMaster = nullptr;
@@ -88,12 +96,11 @@ private:
 	mutex mutex;
 	vector<std::unique_ptr<Channel>> idleChannelPtrs;
 	vector<std::unique_ptr<Channel>> activeChannelPtrs;
-	// change these values to match the format of the wav files you are loading
-	// all wav files must have the same format!! (no mixing and matching)
+
 	static constexpr WORD nChannelsPerSound = 2u;
 	static constexpr DWORD nSamplesPerSec = 44100u;
 	static constexpr WORD nBitsPerSample = 16u;
-	// change this value to increase/decrease the maximum polyphony	
+
 	static constexpr size_t nChannels = 64u;
 };
 
@@ -121,9 +128,7 @@ public:
 		Invalid
 	};
 	Sound() = default;
-	// for backwards compatibility--2nd parameter false -> NotLooping
 	Sound(const wstring& fileName, bool loopingWithAutoCueDetect);
-	// do not pass this function Manual LoopTypes!
 	Sound(const wstring& fileName, LoopType loopType = LoopType::NotLooping);
 	Sound(const wstring& fileName, unsigned int loopStart, unsigned int loopEnd);
 	Sound(const wstring& fileName, float loopStart, float loopEnd);

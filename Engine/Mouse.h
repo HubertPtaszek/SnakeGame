@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/**
+* Klasa do obs³ugi klawiatury.
+*/
 class Mouse
 {
 	friend class MainWindow;

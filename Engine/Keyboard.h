@@ -4,6 +4,11 @@
 
 using namespace std;
 
+/**
+* Klasa do obs³ugi klawiatury.
+*
+* Istnieje ona domyœlnie, lecz na potrzeby naszej aplikacji zosta³a rozszerzona.
+*/
 class Keyboard
 {
 	friend class MainWindow;

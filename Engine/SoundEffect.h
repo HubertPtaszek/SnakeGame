@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/**
+* Klasa SoundEffect bêd¹ca rozszerzeniem Sound.h obs³uguje pojedyncze efekty dzwiêkowe.
+*/
 class SoundEffect
 {
 	uniform_int_distribution<unsigned int> soundDist;

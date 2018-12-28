@@ -1,8 +1,10 @@
 #pragma once
-//MAKRA
-#include "ChiliWin.h"
-#include <sal.h>
 
+#include "ChiliWin.h"
+
+/**
+* Makra domyœlne dla frameworku obs³uguj¹ce b³êdny w aplikacji.
+*/
 #ifdef __cplusplus
 extern "C" {
 #endif

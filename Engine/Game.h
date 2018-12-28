@@ -9,13 +9,15 @@
 
 using namespace std;
 
+/**
+* Klasa Game jest g³ówn¹ klas¹ aplikacji, obs³uguje funkcjonalnoœci, wygl¹d oraz dzwiêki.
+*/
 class Game
 {
-	void ComposeFrame();		//User Functions 
-	void UpdateModel();			//User Functions 
+	void ComposeFrame();
+	void UpdateModel();
 	MainWindow& wnd;
 	Graphics gfx;
-	/*  User Variables              */
 	GameSettings settings = "settings.txt";
 	Frame brd;
 	Snake snake;
