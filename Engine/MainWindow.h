@@ -13,10 +13,10 @@ using namespace std;
 */
 class HWNDKey
 {
-	friend Graphics::Graphics( HWNDKey& );
+	friend Graphics::Graphics(HWNDKey&);
 public:
-	HWNDKey( const HWNDKey& ) = delete;
-	HWNDKey& operator=( HWNDKey& ) = delete;
+	HWNDKey(const HWNDKey&) = delete;
+	HWNDKey& operator=(HWNDKey&) = delete;
 protected:
 	HWNDKey() = default;
 protected:
@@ -39,16 +39,16 @@ public:
 		virtual wstring GetExceptionType() const override { return L"Windows Exception"; }
 	};
 public:
-	MainWindow( HINSTANCE hInst,wchar_t* pArgs );
-	MainWindow( const MainWindow& ) = delete;
-	MainWindow& operator=( const MainWindow& ) = delete;
+	MainWindow(HINSTANCE hInst, wchar_t* pArgs);
+	MainWindow(const MainWindow&) = delete;
+	MainWindow& operator=(const MainWindow&) = delete;
 	~MainWindow();
 	bool IsActive() const;
 	bool IsMinimized() const;
-	void ShowMessageBox( const wstring& title,const wstring& message ) const;
+	void ShowMessageBox(const wstring& title, const wstring& message) const;
 	void Kill()
 	{
-		PostQuitMessage( 0 );
+		PostQuitMessage(0);
 	}
 	bool ProcessMessage();
 	const wstring& GetArgs() const
@@ -56,9 +56,9 @@ public:
 		return args;
 	}
 private:
-	static LRESULT WINAPI _HandleMsgSetup( HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam );
-	static LRESULT WINAPI _HandleMsgThunk( HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam );
-	LRESULT HandleMsg( HWND hWnd,UINT msg,WPARAM wParam,LPARAM lParam );
+	static LRESULT WINAPI _HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	static LRESULT WINAPI _HandleMsgThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	LRESULT HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 public:
 	Keyboard kbd;
 	Mouse mouse;

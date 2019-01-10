@@ -404,6 +404,7 @@ void SpriteCodex::DrawGameOver(int x, int y, Graphics& gfx)
 
 void SpriteCodex::DrawTitle(int x, int y, Graphics & gfx)
 {
+	gfx.PutPixel(1, 1, 255, 255, 0);
 	gfx.PutPixel(x + 0, y + 0, 179, 146, 127);
 	gfx.PutPixel(x + 0, y + 1, 201, 168, 151);
 	gfx.PutPixel(x + 0, y + 2, 199, 166, 151);

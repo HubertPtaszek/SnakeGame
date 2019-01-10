@@ -118,12 +118,17 @@ void Game::ComposeFrame()
 		brd.DrawCells();
 		if (gameIsOver)
 		{
-			SpriteCodex::DrawGameOver(350, 265, gfx);
+			SpriteCodex::DrawGameOver(290, 225, gfx);
+			if (wnd.kbd.KeyIsPressed(VK_RETURN))
+				exit(0);
 		}
 		brd.DrawFrame();
 	}
 	else
 	{
-		SpriteCodex::DrawTitle(290, 225, gfx);
+		string title = "Wcisnij ENTER!";
+		const wstring eMsg = wstring(title.begin(), title.end());
+		wnd.ProcessMessage();
+		//SpriteCodex::DrawTitle(290, 225, gfx);
 	}
 }
