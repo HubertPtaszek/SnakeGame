@@ -2,7 +2,7 @@
 10
 
 [Frame Dimensions]
-60 40
+55 45
 
 [Poison Amount]
 1000
@@ -11,4 +11,4 @@
 6
 
 [Speedup Rate]
-0.90
+1.0
