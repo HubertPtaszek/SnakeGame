@@ -15,10 +15,10 @@ Font::Font(const std::string& filename, Color chroma)
 	assert(glyphHeight * nRows == surface.GetHeight());
 }
 
-void Font::DrawText(const std::string& text, const Vei2& pos, Color color, Graphics& gfx) const
+void Font::DrawTextSub(const string& text, const Vei2& pos, Color color, Graphics& gfx) const
 {
 	// create effect functor
-	SpriteEffect::Substitution e{ chroma,color };
+	SpriteEffect::Substitution e{ chroma, color };
 	// curPos is the pos that we are drawing to on the screen
 	auto curPos = pos;
 	for (auto c : text)

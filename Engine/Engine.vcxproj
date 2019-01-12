@@ -245,6 +245,7 @@
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Fixedsys16x28.bmp" />
     <Image Include="Snake.ico" />
   </ItemGroup>
   <ItemGroup>

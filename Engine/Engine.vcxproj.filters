@@ -167,6 +167,9 @@
     <Image Include="Snake.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Fixedsys16x28.bmp">
+      <Filter>Images</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Sounds\Eat.wav">

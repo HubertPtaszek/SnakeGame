@@ -7,8 +7,8 @@
 class Font
 {
 public:
-	Font(const std::string& filename, Color chroma = Colors::White);
-	void DrawText(const std::string& text, const Vei2& pos, Color color, Graphics& gfx) const;
+	Font(const string& filename, Color chroma = Colors::White);
+	void DrawTextSub(const string& text, const Vei2& pos, Color color, Graphics& gfx) const;
 private:
 	RectI MapGlyphRect(char c) const;
 private:

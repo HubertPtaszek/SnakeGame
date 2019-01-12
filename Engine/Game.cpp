@@ -118,7 +118,7 @@ void Game::ComposeFrame()
 		brd.DrawCells();
 		if (gameIsOver)
 		{
-			SpriteCodex::DrawGameOver(290, 225, gfx);
+			font.DrawTextSub("Przegrana :(", { 261, 299 }, textColor, gfx);
 			if (wnd.kbd.KeyIsPressed(VK_RETURN))
 				exit(0);
 		}
@@ -126,9 +126,6 @@ void Game::ComposeFrame()
 	}
 	else
 	{
-		string title = "Wcisnij ENTER!";
-		const wstring eMsg = wstring(title.begin(), title.end());
-		wnd.ProcessMessage();
-		font.DrawText("test test", { wnd.mouse.GetPosX(), wnd.mouse.GetPosX() }, textColor, gfx);
+		font.DrawTextSub("test test", { 290, 225 }, textColor, gfx);
 	}
 }
