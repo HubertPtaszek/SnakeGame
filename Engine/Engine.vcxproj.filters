@@ -84,9 +84,6 @@
     <ClInclude Include="Font.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Surface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -94,6 +91,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SpriteEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Surface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,13 +140,13 @@
     <ClCompile Include="Font.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Surface.cpp">
+    <ClCompile Include="GraphicsOD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SurfaceOD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GraphicsOD.cpp">
+    <ClCompile Include="Surface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -166,9 +166,6 @@
   <ItemGroup>
     <Image Include="Snake.ico">
       <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\Hubert\Desktop\Fixedsys16x28.bmp">
-      <Filter>Images</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>

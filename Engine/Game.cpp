@@ -129,6 +129,6 @@ void Game::ComposeFrame()
 		string title = "Wcisnij ENTER!";
 		const wstring eMsg = wstring(title.begin(), title.end());
 		wnd.ProcessMessage();
-		//SpriteCodex::DrawTitle(290, 225, gfx);
+		font.DrawText("test test", { wnd.mouse.GetPosX(), wnd.mouse.GetPosX() }, textColor, gfx);
 	}
 }

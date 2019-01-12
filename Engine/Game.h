@@ -3,6 +3,7 @@
 #include "Graphics.h"
 #include "Frame.h"
 #include "Snake.h"
+#include "Font.h"
 #include <random>
 #include "SoundEffect.h"
 #include "FrameTimer.h"
@@ -20,6 +21,10 @@ class Game
 	Graphics gfx;
 	GameSettings settings = "settings.txt";
 	Frame brd;
+
+	static constexpr Color textColor = Colors::White;
+	Font font = "Fixedsys16x28.bmp";
+
 	Snake snake;
 	Location delta_loc = { 1,0 };
 	mt19937 rng;
