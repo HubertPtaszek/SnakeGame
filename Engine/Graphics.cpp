@@ -277,21 +277,6 @@ void Graphics::EndFrame()
 	}
 }
 
-void Graphics::BeginFrame()
-{
-	// clear the sysbuffer
-	memset( pSysBuffer,0u,sizeof( Color ) * Graphics::ScreenHeight * Graphics::ScreenWidth );
-}
-
-void Graphics::PutPixel( int x,int y,Color c )
-{
-	assert( x >= 0 );
-	assert( x < int( Graphics::ScreenWidth ) );
-	assert( y >= 0 );
-	assert( y < int( Graphics::ScreenHeight ) );
-	pSysBuffer[Graphics::ScreenWidth * y + x] = c;
-}
-
 void Graphics::DrawRect( int x0,int y0,int x1,int y1,Color c )
 {
 	if( x0 > x1 )
@@ -312,6 +297,11 @@ void Graphics::DrawRect( int x0,int y0,int x1,int y1,Color c )
 	}
 }
 
+RectI Graphics::GetScreenRect()
+{
+	return{ 0,ScreenWidth,0,ScreenHeight };
+}
+
 
 //////////////////////////////////////////////////
 //           Graphics Exception
@@ -321,7 +311,7 @@ Graphics::Exception::Exception( HRESULT hr,const std::wstring& note,const wchar_
 	hr( hr )
 {}
 
-std::wstring Graphics::Exception::GetFullMessage() const
+wstring Graphics::Exception::GetFullMessage() const
 {
 	const std::wstring empty = L"";
 	const std::wstring errorName = GetErrorName();
@@ -338,19 +328,19 @@ std::wstring Graphics::Exception::GetFullMessage() const
 			: empty);
 }
 
-std::wstring Graphics::Exception::GetErrorName() const
+wstring Graphics::Exception::GetErrorName() const
 {
 	return DXGetErrorString( hr );
 }
 
-std::wstring Graphics::Exception::GetErrorDescription() const
+wstring Graphics::Exception::GetErrorDescription() const
 {
 	std::array<wchar_t,512> wideDescription;
 	DXGetErrorDescription( hr,wideDescription.data(),wideDescription.size() );
 	return wideDescription.data();
 }
 
-std::wstring Graphics::Exception::GetExceptionType() const
+wstring Graphics::Exception::GetExceptionType() const
 {
 	return L"Chili Graphics Exception";
 }
