@@ -27,6 +27,10 @@ void Game::UpdateModel()
 	const float dt = ft.Mark();
 	if (gameIsStarted)
 	{
+		int scoreInt = snake.GetLength() - 1;
+		string score = to_string(scoreInt);
+		font.DrawTextSub("Punkty: ", { 261, 550 }, textColor, gfx);
+		font.DrawTextSub(score, { 380, 550 }, textColor, gfx);
 		if (!gameIsOver)
 		{
 			if (wnd.kbd.KeyIsPressed(VK_UP))
@@ -126,6 +130,8 @@ void Game::ComposeFrame()
 	}
 	else
 	{
-		font.DrawTextSub("test test", { 290, 225 }, textColor, gfx);
+		font.DrawTextSub("Snake Game 2.0", { 238, 10 }, textColor, gfx);
+		gfx.DrawSprite(200, 150, s, SpriteEffect::Copy{});
+		font.DrawTextSub("Wcisnij ENTER, aby rozpoczac gre!", { 85, 560 }, textColor, gfx);
 	}
 }

@@ -5,6 +5,7 @@
 #include "Snake.h"
 #include "Font.h"
 #include <random>
+#include <string.h>
 #include "SoundEffect.h"
 #include "FrameTimer.h"
 
@@ -23,6 +24,7 @@ class Game
 	Frame brd;
 	static constexpr Color textColor = Colors::White;
 	Font font = "Fixedsys16x28.bmp";
+	Surface s = { "snake.bmp" };
 	Snake snake;
 	Location delta_loc = { 1,0 };
 	mt19937 rng;

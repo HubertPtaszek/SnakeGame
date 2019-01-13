@@ -246,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Fixedsys16x28.bmp" />
+    <Image Include="snake.bmp" />
     <Image Include="Snake.ico" />
   </ItemGroup>
   <ItemGroup>
