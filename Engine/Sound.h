@@ -86,7 +86,22 @@ public:
 	static void SetMasterVolume(float vol = 1.0f);
 	static const WAVEFORMATEX& GetFormat();
 	void PlaySoundBuffer(class Sound& s, float freqMod, float vol);
+private:
+	SoundSystem();
+	void DeactivateChannel(Channel& channel);
+	XAudioDll xaudio_dll;
+	Microsoft::WRL::ComPtr<struct IXAudio2> pEngine;
+	struct IXAudio2MasteringVoice* pMaster = nullptr;
+	unique_ptr<WAVEFORMATEX> format;
+	mutex mutex;
+	vector<std::unique_ptr<Channel>> idleChannelPtrs;
+	vector<std::unique_ptr<Channel>> activeChannelPtrs;
 
+	static constexpr WORD nChannelsPerSound = 2u;
+	static constexpr DWORD nSamplesPerSec = 44100u;
+	static constexpr WORD nBitsPerSample = 16u;
+
+	static constexpr size_t nChannels = 64u;
 };
 
 /*!
