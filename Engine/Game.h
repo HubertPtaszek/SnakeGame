@@ -12,7 +12,7 @@
 using namespace std;
 
 /*!
-* @brief Klasa Game jest g³ówn¹ klas¹ aplikacji, obs³uguje funkcjonalnoœci, wygl¹d oraz dzwiêki.
+* @brief Klasa Game jest g³ówn¹ klas¹ aplikacji, obs³uguje funkcjonalnoœci, wygl¹d oraz dŸwiêki.
 */
 class Game
 {

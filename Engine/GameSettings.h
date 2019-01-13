@@ -2,7 +2,7 @@
 #include <string>
 
 /*!
-* @brief Klasa obs³ugujaca ustawienia gry tj nazwa, predkosc, ilosc bonusow itd.
+* @brief Klasa obs³uguj¹ca ustawienia gry tj. nazwa, prêdkoœæ, iloœæ bonusów itd.
 */
 class GameSettings
 {

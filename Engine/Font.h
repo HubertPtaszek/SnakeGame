@@ -4,7 +4,7 @@
 #include "Surface.h"
 #include "Vec2.h"
 /*!
-* @brief Klasa obs³uguj¹ca czcionki (na bazie bit mapy) zmodyfikowana na potzreby naszej aplikacji.
+* @brief Klasa obs³uguj¹ca czcionki (na bazie bit mapy) zmodyfikowana na potrzeby naszej aplikacji.
 */
 class Font
 {

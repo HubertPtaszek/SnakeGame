@@ -4,7 +4,7 @@
 using namespace std;
 
 /*!
-* @brief Klasa do obs³ugi klawiatury.
+* @brief Klasa do obs³ugi myszy.
 */
 class Mouse
 {

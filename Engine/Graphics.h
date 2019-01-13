@@ -11,7 +11,7 @@ using namespace std;
 /*!
 * @brief Klasa obs³uguj¹ca wygl¹d graficzny aplikacji.
 *
-* @details Domyœlnie zawarta we frameworku, zmienionan apotrzeby aplikacji.
+* @details Domyœlnie zawarta we frameworku, zmieniona na potrzeby aplikacji.
 */
 class Graphics
 {

@@ -6,9 +6,9 @@
 #include "Rect.h"
 
 /*!
-* @brief Klasa wspieraj¹ca "drukowanie" bitmap
+* @brief Klasa wspieraj¹ca "drukowanie" bitmap.
 *
-* @details Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
+* @details Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zmodyfikowany na nasze potrzeby dla frameworku.
 */
 class Surface
 {
