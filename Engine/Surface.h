@@ -8,7 +8,7 @@
 /*!
 * @brief Klasa wspieraj¹ca "drukowanie" bitmap
 *
-* Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
+* @details Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
 */
 class Surface
 {

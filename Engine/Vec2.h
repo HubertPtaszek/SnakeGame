@@ -5,7 +5,7 @@
 /*!
 * @brief Klasa obsluguj¹ca pozycjonowanie (uk³ad kartezjañski).
 *
-* Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy dla frameworku.
+* @details Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy dla frameworku.
 */
 template<typename T>
 class Vec2_

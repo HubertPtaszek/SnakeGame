@@ -6,7 +6,7 @@
 /*!
 * @brief  Klasa wspieraj¹ca wypisynaie tekstu oraz spritów.
 *
-* Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
+* @details Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
 */
 namespace SpriteEffect
 {

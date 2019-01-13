@@ -107,7 +107,7 @@ private:
 /*!
 * @brief Klasy SoundSystem i Sound, s¹ klasami zalecanymi do zawarcia w ChiliFramework (DirectX).
 *
-* Zosta³y zmodyfikowane na potzreby dzwiêku w naszej aplikacji
+* @details Zosta³y zmodyfikowane na potzreby dzwiêku w naszej aplikacji
 */
 class Sound
 {

@@ -26,7 +26,7 @@ protected:
 /*!
 * @brief Klasa MainWindow dziedziczy równie¿ po klasie wbudowanej HWNDKey.
 *
-* Zawiera ona obs³uge wyj¹tków oraz standardowwa obs³ugê okna.
+* @details Zawiera ona obs³uge wyj¹tków oraz standardowwa obs³ugê okna.
 */
 class MainWindow : public HWNDKey
 {
