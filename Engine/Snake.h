@@ -4,8 +4,8 @@
 
 using namespace std;
 
-/**
-* Klasa Snake zawiera w sobie klasê odpowidaj¹c¹ za cia³o wê¿a, a tak¿e funkcjê obs³uguj¹ce zachowania w grze wê¿a.
+/*!
+* @brief Klasa Snake zawiera w sobie klasê odpowidaj¹c¹ za cia³o wê¿a, a tak¿e funkcjê obs³uguj¹ce zachowania w grze wê¿a.
 */
 class Snake
 {

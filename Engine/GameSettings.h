@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 
-/**
-* Klasa obs³ugujaca ustawienia gry tj nazwa, predkosc, ilosc bonusow itd.
+/*!
+* @brief Klasa obs³ugujaca ustawienia gry tj nazwa, predkosc, ilosc bonusow itd.
 */
 class GameSettings
 {

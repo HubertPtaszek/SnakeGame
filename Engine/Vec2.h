@@ -2,8 +2,8 @@
 
 #include <cmath>
 
-/**
-* Klasa obsluguj¹ca pozycjonowanie (uk³ad kartezjañski).
+/*!
+* @brief Klasa obsluguj¹ca pozycjonowanie (uk³ad kartezjañski).
 *
 * Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy dla frameworku.
 */

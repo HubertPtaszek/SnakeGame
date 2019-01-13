@@ -193,4 +193,7 @@
       <Filter>Configs</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>

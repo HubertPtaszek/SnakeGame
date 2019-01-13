@@ -3,8 +3,8 @@
 #include "Colors.h"
 #include "Graphics.h"
 
-/**
-* Klasa wspieraj¹ca wypisynaie tekstu oraz spritów.
+/*!
+* @brief  Klasa wspieraj¹ca wypisynaie tekstu oraz spritów.
 *
 * Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
 */

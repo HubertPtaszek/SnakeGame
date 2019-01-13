@@ -11,8 +11,8 @@
 
 using namespace std;
 
-/**
-* Klasa Game jest g³ówn¹ klas¹ aplikacji, obs³uguje funkcjonalnoœci, wygl¹d oraz dzwiêki.
+/*!
+* @brief Klasa Game jest g³ówn¹ klas¹ aplikacji, obs³uguje funkcjonalnoœci, wygl¹d oraz dzwiêki.
 */
 class Game
 {
@@ -41,8 +41,8 @@ class Game
 	bool gameIsOver = false;
 	bool gameIsStarted = false;
 public:
-	Game( class MainWindow& wnd );
-	Game( const Game& ) = delete;
-	Game& operator=( const Game& ) = delete;
+	Game(class MainWindow& wnd);
+	Game(const Game&) = delete;
+	Game& operator=(const Game&) = delete;
 	void Go();
 };

@@ -2,8 +2,8 @@
 #include <string>
 
 using namespace std;
-/**
-* Klasa obs³uguj¹ca wyj¹tki w aplikacji.
+/*!
+* @brief Klasa obs³uguj¹ca wyj¹tki w aplikacji.
 */
 class ChiliException
 {

@@ -6,8 +6,8 @@
 
 using namespace std;
 
-/**
-* Klasa SoundEffect bêd¹ca rozszerzeniem Sound.h obs³uguje pojedyncze efekty dzwiêkowe.
+/*!
+* @brief Klasa SoundEffect bêd¹ca rozszerzeniem Sound.h obs³uguje pojedyncze efekty dzwiêkowe.
 */
 class SoundEffect
 {

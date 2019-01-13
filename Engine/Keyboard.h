@@ -4,8 +4,8 @@
 
 using namespace std;
 
-/**
-* Klasa do obs³ugi klawiatury.
+/*!
+* @brief Klasa do obs³ugi klawiatury.
 *
 * Istnieje ona domyœlnie, lecz na potrzeby naszej aplikacji zosta³a rozszerzona.
 */
@@ -35,13 +35,13 @@ public:
 		};
 		Event()
 			:
-			type( Invalid ),
-			code( 0u )
+			type(Invalid),
+			code(0u)
 		{}
-		Event( Type type,unsigned char code )
+		Event(Type type, unsigned char code)
 			:
-			type( type ),
-			code( code )
+			type(type),
+			code(code)
 		{}
 		bool IsPress() const
 		{
@@ -63,9 +63,9 @@ public:
 		Type type;
 	};
 	Keyboard() = default;
-	Keyboard( const Keyboard& ) = delete;
-	Keyboard& operator=( const Keyboard& ) = delete;
-	bool KeyIsPressed( unsigned char keycode ) const;
+	Keyboard(const Keyboard&) = delete;
+	Keyboard& operator=(const Keyboard&) = delete;
+	bool KeyIsPressed(unsigned char keycode) const;
 	Event ReadKey();
 	bool KeyIsEmpty() const;
 	char ReadChar();

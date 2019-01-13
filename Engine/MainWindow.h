@@ -8,8 +8,8 @@
 
 using namespace std;
 
-/**
-* Nadanie dostepu dla klasy Graphics do klasy wbudowanej HWNDKey
+/*!
+* @brief Nadanie dostepu dla klasy Graphics do klasy wbudowanej HWNDKey
 */
 class HWNDKey
 {
@@ -23,13 +23,19 @@ protected:
 	HWND hWnd = nullptr;
 };
 
-/**
-* Klasa MainWindow dziedziczy równie¿ po klasie wbudowanej HWNDKey.
+/*!
+* @brief Klasa MainWindow dziedziczy równie¿ po klasie wbudowanej HWNDKey.
 *
 * Zawiera ona obs³uge wyj¹tków oraz standardowwa obs³ugê okna.
 */
 class MainWindow : public HWNDKey
 {
+	static LRESULT WINAPI _HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	static LRESULT WINAPI _HandleMsgThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	LRESULT HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	static constexpr wchar_t* wndClassName = L"Snake Game";
+	HINSTANCE hInst = nullptr;
+	wstring args;
 public:
 	class Exception : public ChiliException
 	{
@@ -38,7 +44,6 @@ public:
 		virtual wstring GetFullMessage() const override { return GetNote() + L"\nAt: " + GetLocation(); }
 		virtual wstring GetExceptionType() const override { return L"Windows Exception"; }
 	};
-public:
 	MainWindow(HINSTANCE hInst, wchar_t* pArgs);
 	MainWindow(const MainWindow&) = delete;
 	MainWindow& operator=(const MainWindow&) = delete;
@@ -55,15 +60,6 @@ public:
 	{
 		return args;
 	}
-private:
-	static LRESULT WINAPI _HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-	static LRESULT WINAPI _HandleMsgThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-	LRESULT HandleMsg(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-public:
 	Keyboard kbd;
 	Mouse mouse;
-private:
-	static constexpr wchar_t* wndClassName = L"Snake Game";
-	HINSTANCE hInst = nullptr;
-	wstring args;
 };

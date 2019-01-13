@@ -1,8 +1,8 @@
 #pragma once
 #include <chrono>
 
-/**
-* Klasa odpowiadaj¹ca za obs³ugê czasu w grze.
+/*!
+* @brief Klasa odpowiadaj¹ca za obs³ugê czasu w grze.
 */
 class FrameTimer
 {

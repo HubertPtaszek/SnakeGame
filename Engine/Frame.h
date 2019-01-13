@@ -7,8 +7,8 @@
 
 using namespace std;
 
-/**
-* Klasa odpowiadaj¹ca za obs³ugê ramki gry oraz elementów statycznych.
+/*!
+* @brief Klasa odpowiadaj¹ca za obs³ugê ramki gry oraz elementów statycznych.
 */
 class Frame
 {

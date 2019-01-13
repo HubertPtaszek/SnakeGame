@@ -3,8 +3,8 @@
 #include "Graphics.h"
 #include "Surface.h"
 #include "Vec2.h"
-/**
-* Klasa obs³uguj¹ca czcionki (na bazie bit mapy) zmodyfikowana na potzreby naszej aplikacji.
+/*!
+* @brief Klasa obs³uguj¹ca czcionki (na bazie bit mapy) zmodyfikowana na potzreby naszej aplikacji.
 */
 class Font
 {
@@ -12,7 +12,7 @@ class Font
 	Surface surface;
 	int glyphWidth;
 	int glyphHeight;
-	static constexpr int nColumns = 32; 
+	static constexpr int nColumns = 32;
 	static constexpr int nRows = 3;
 	Color chroma;
 	static constexpr char firstChar = ' ';

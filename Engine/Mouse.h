@@ -3,8 +3,8 @@
 
 using namespace std;
 
-/**
-* Klasa do obs³ugi klawiatury.
+/*!
+* @brief Klasa do obs³ugi klawiatury.
 */
 class Mouse
 {
@@ -46,19 +46,19 @@ public:
 		};
 		Event()
 			:
-			type( Invalid ),
-			leftIsPressed( false ),
-			rightIsPressed( false ),
-			x( 0 ),
-			y( 0 )
+			type(Invalid),
+			leftIsPressed(false),
+			rightIsPressed(false),
+			x(0),
+			y(0)
 		{}
-		Event( Type type,const Mouse& parent )
+		Event(Type type, const Mouse& parent)
 			:
-			type( type ),
-			leftIsPressed( parent.leftIsPressed ),
-			rightIsPressed( parent.rightIsPressed ),
-			x( parent.x ),
-			y( parent.y )
+			type(type),
+			leftIsPressed(parent.leftIsPressed),
+			rightIsPressed(parent.rightIsPressed),
+			x(parent.x),
+			y(parent.y)
 		{}
 		bool IsValid() const
 		{
@@ -68,7 +68,7 @@ public:
 		{
 			return type;
 		}
-		pair<int,int> GetPos() const
+		pair<int, int> GetPos() const
 		{
 			return{ x,y };
 		}
@@ -88,14 +88,14 @@ public:
 		{
 			return rightIsPressed;
 		}
-	private: 
+	private:
 		Type type;
 	};
 public:
 	Mouse() = default;
-	Mouse( const Mouse& ) = delete;
-	Mouse& operator=( const Mouse& ) = delete;
-	pair<int,int> GetPos() const;
+	Mouse(const Mouse&) = delete;
+	Mouse& operator=(const Mouse&) = delete;
+	pair<int, int> GetPos() const;
 	int GetPosX() const;
 	int GetPosY() const;
 	bool LeftIsPressed() const;

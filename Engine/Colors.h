@@ -1,7 +1,7 @@
 #pragma once
 
-/**
-* Klasa s³u¿aca do operacji na kolorach, zalecane utworzenie jej dla frameworku.
+/*!
+* @brief Klasa s³u¿aca do operacji na kolorach, zalecane utworzenie jej dla frameworku.
 */
 class Color
 {
@@ -83,8 +83,8 @@ public:
 	}
 };
 
-/**
-* Przestrzeñ nazw zawarta w projekcie, zawiera definicje kolorów.
+/*!
+* @brief Przestrzeñ nazw zawarta w projekcie, zawiera definicje kolorów.
 */
 namespace Colors
 {

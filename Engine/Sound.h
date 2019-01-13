@@ -10,15 +10,15 @@
 
 using namespace std;
 
-/**
-* Deklaracje wnudowanych struktur w sposób globalny w celu pozniejszego ich powielania
+/*!
+* @brief Deklaracje wnudowanych struktur w sposób globalny w celu pozniejszego ich powielania
 */
 struct tWAVEFORMATEX;
 typedef tWAVEFORMATEX WAVEFORMATEX;
 
 
-/**
-* Klasy SoundSystem i Sound, s¹ klasami zalecanymi do zawarcia w ChiliFramework (DirectX).
+/*!
+* @brief Klasy SoundSystem i Sound, s¹ klasami zalecanymi do zawarcia w ChiliFramework (DirectX).
 *
 * Zosta³y zmodyfikowane na potzreby dzwiêku w naszej aplikacji
 */
@@ -86,24 +86,14 @@ public:
 	static void SetMasterVolume(float vol = 1.0f);
 	static const WAVEFORMATEX& GetFormat();
 	void PlaySoundBuffer(class Sound& s, float freqMod, float vol);
-private:
-	SoundSystem();
-	void DeactivateChannel(Channel& channel);
-	XAudioDll xaudio_dll;
-	Microsoft::WRL::ComPtr<struct IXAudio2> pEngine;
-	struct IXAudio2MasteringVoice* pMaster = nullptr;
-	unique_ptr<WAVEFORMATEX> format;
-	mutex mutex;
-	vector<std::unique_ptr<Channel>> idleChannelPtrs;
-	vector<std::unique_ptr<Channel>> activeChannelPtrs;
 
-	static constexpr WORD nChannelsPerSound = 2u;
-	static constexpr DWORD nSamplesPerSec = 44100u;
-	static constexpr WORD nBitsPerSample = 16u;
-
-	static constexpr size_t nChannels = 64u;
 };
 
+/*!
+* @brief Klasy SoundSystem i Sound, s¹ klasami zalecanymi do zawarcia w ChiliFramework (DirectX).
+*
+* Zosta³y zmodyfikowane na potzreby dzwiêku w naszej aplikacji
+*/
 class Sound
 {
 	friend SoundSystem::Channel;

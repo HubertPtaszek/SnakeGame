@@ -2,8 +2,8 @@
 #define _WIN32_WINNT 0x0601 //for Windows 7 or later
 #include <sdkddkver.h> //for Windows 7 or later
 
-/**
-* Definicje domyœlnie zwarte we frameworku i niezbêdne do dzia³ania.
+/*!
+* @brief Definicje domyœlnie zwarte we frameworku i niezbêdne do dzia³ania.
 */
 #define WIN32_LEAN_AND_MEAN
 #define NOGDICAPMASKS

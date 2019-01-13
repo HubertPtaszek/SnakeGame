@@ -8,8 +8,8 @@
 
 using namespace std;
 
-/**
-* Klasa obs³uguj¹ca wygl¹d graficzny aplikacji.
+/*!
+* @brief Klasa obs³uguj¹ca wygl¹d graficzny aplikacji.
 *
 * Domyœlnie zawarta we frameworku, zmienionan apotrzeby aplikacji.
 */
