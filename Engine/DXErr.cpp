@@ -1,5 +1,3 @@
-//Automatycznie generowany kod b³êdów DirectX
-
 #include "dxerr.h"
 
 #include <stdio.h>

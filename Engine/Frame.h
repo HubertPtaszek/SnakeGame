@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/**
+* Klasa odpowiadaj¹ca za obs³ugê ramki gry oraz elementów statycznych.
+*/
 class Frame
 {
 	static constexpr Color frameColor = Colors::Gray;

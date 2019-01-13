@@ -3,26 +3,21 @@
 #include "Graphics.h"
 #include "Surface.h"
 #include "Vec2.h"
-
+/**
+* Klasa obs³uguj¹ca czcionki (na bazie bit mapy) zmodyfikowana na potzreby naszej aplikacji.
+*/
 class Font
 {
+	RectI MapGlyphRect(char c) const;
+	Surface surface;
+	int glyphWidth;
+	int glyphHeight;
+	static constexpr int nColumns = 32; 
+	static constexpr int nRows = 3;
+	Color chroma;
+	static constexpr char firstChar = ' ';
+	static constexpr char lastChar = '~';
 public:
 	Font(const string& filename, Color chroma = Colors::White);
 	void DrawTextSub(const string& text, const Vei2& pos, Color color, Graphics& gfx) const;
-private:
-	RectI MapGlyphRect(char c) const;
-private:
-	// holds the font sheet bitmap data
-	Surface surface;
-	// this gives the dimensions of a glyph in the font sheet
-	int glyphWidth;
-	int glyphHeight;
-	// number of rows / columns in the font sheet (this is fixed)
-	static constexpr int nColumns = 32;
-	static constexpr int nRows = 3;
-	// font sheet chroma color
-	Color chroma;
-	// start and end drawable character codes
-	static constexpr char firstChar = ' ';
-	static constexpr char lastChar = '~';
 };

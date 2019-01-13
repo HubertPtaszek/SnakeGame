@@ -3,6 +3,11 @@
 #include "Colors.h"
 #include "Graphics.h"
 
+/**
+* Klasa wspieraj¹ca wypisynaie tekstu oraz spritów.
+*
+* Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy zzmodyfikowany na nasze potrzeby dla frameworku.
+*/
 namespace SpriteEffect
 {
 	class Chroma
@@ -48,28 +53,5 @@ namespace SpriteEffect
 		{
 			gfx.PutPixel(xDest, yDest, cSrc);
 		}
-	};
-	class Ghost
-	{
-	public:
-		Ghost(Color c)
-			:
-			chroma(c)
-		{}
-		void operator()(Color src, int xDest, int yDest, Graphics& gfx) const
-		{
-			if (src != chroma)
-			{
-				const Color dest = gfx.GetPixel(xDest, yDest);
-				const Color blend = {
-					unsigned char((src.GetR() + dest.GetR()) / 2),
-					unsigned char((src.GetG() + dest.GetG()) / 2),
-					unsigned char((src.GetB() + dest.GetB()) / 2)
-				};
-				gfx.PutPixel(xDest, yDest, blend);
-			}
-		}
-	private:
-		Color chroma;
 	};
 }

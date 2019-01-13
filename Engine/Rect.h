@@ -2,6 +2,11 @@
 
 #include "Vec2.h"
 
+/**
+* Klasa wspieraj¹ca wypisynaie tekstu oraz spritów.
+*
+* Nie generowana lecz wykorzystujemy istniej¹cy szablon (wzór) klasy dla frameworku.
+*/
 template<typename T>
 class Rect_
 {
